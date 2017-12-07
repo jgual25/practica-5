@@ -1,22 +1,22 @@
-.h1 {
+.h1 { /*ESTIL APLICATS AL TITOL PER A LA PÀGINA */
 	margin: .67em 0;
 	color: black;
 	font-family: "Times New Roman", "Times", Serif;
 	background-color: rgb(67, 159, 82);
 	text-align: center;
 }
-.h3 {
+.h3 { /*ESTIL APLICATS AL SUBTITOL DE LA PÀGINA */
 	margin: .67em 0;
 	color: black;
 	font-family: "Times New Roman", "Times", Serif;
 	background-color: rgb(67, 159, 82);
 	text-align: center;
 }
-.quadretaula {
+.quadretaula { /* COMPORTAMENT DEL CONTINGUT DINTRE DE LA TAULA RESULTANT*/
 	display: inherit;
 	align-content: center;
 }
-.table-striped {
+.table-striped { /* CARACTERÍSTIQUES DE LA TAULA STRIPPED-ROW*/
 	background-color: ghostwhite;
 	border-collapse: inherit;
 	color: mediumseagreen;
@@ -26,7 +26,7 @@
 	border-radius: 25px;
 	margin: auto;
 }
-.boto {
+.boto { /* VISUALITZACIÓ DEL BOTÓ QUE RELLANÇA LA PÀGINA*/
 	text-decoration: underline;
 	margin: auto;
 	background-color: rgb(67, 159, 82); 
