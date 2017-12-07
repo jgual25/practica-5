@@ -1,0 +1,38 @@
+.h1 {
+	margin: .67em 0;
+	color: black;
+	font-family: "Times New Roman", "Times", Serif;
+	background-color: rgb(67, 159, 82);
+	text-align: center;
+}
+.h3 {
+	margin: .67em 0;
+	color: black;
+	font-family: "Times New Roman", "Times", Serif;
+	background-color: rgb(67, 159, 82);
+	text-align: center;
+}
+.quadretaula {
+	display: inherit;
+	align-content: center;
+}
+.table-striped {
+	background-color: ghostwhite;
+	border-collapse: inherit;
+	color: mediumseagreen;
+	border-spacing: 25px;
+	border-width: 3px;
+	border-style: ridge;
+	border-radius: 25px;
+	margin: auto;
+}
+.boto {
+	text-decoration: underline;
+	margin: auto;
+	background-color: rgb(67, 159, 82); 
+	font-size: 15px;
+	color: white;
+	font-family: "Times New Roman", "Times", Serif;
+	-webkit-appearance: button;
+	display: block;
+}

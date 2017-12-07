@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>Taules de multiplicar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/estils.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<script> 
+		function altravegada(){ //creació de la funció que engloba tot el procés de multiplicar
+
+		document.body.innerHTML = '';
+
+		document.write("<h1 class= \"h1\"><u> Anem a recordar les taules de multiplicar! </u></h1>"); //Títol general
+
+		document.write("<link rel='stylesheet' type='text/css' href='css/bootstrap.css'>");
+		document.write("<link rel='stylesheet' type='text/css' href='css/estils.css'>");
+
+        var x; //establiment de les variables corresponents necessàries per a la funció, així com la variable "unaaltravegada" per a que en cas d'error o de no poder operar es pugui tornar a operar l'acció. 
+        var y;
+        var unaaltravegada;
+        unaaltravegada=true
+
+        while (unaaltravegada==true){ // declaració del while per tal que es demani un número de l'1 al 9. Booleà que en el cas de que sigui TRUE surti una finestra emergent que demani el número.
+        var x=prompt("Escollir un nombre entre l'1 i el 9:");
+       
+
+            if(x>=1 && x<=9 && x!=NaN && x%1 == 0) { // per als números entre l'1 i el 9, quan no correspongui a un NaN i quan el mod resulti 0
+			document.write("<div class= \"quadretaula\">");          
+            document.write("<table class= \"table-striped\">");
+            	document.write("<h3 class= \"h3\">Per el número "+x+" la taula de multiplicar és:</h3>") //creació d'un subtítol que escriurà el nombre introduït anteriorment elegit. 
+
+                document.write("<th> Taula del "+ x + "</th>");
+        	
+                for (var y=1; y <= 10; y++){ // condició que permet ampliar en 1 cada pic la variable 'y' per així poder obtenir les multiplicacions de l'1 al 10.
+                    document.write("<tr>");
+  
+                        document.write("<td>" + x + "x" + y + "</td> <td> = </td>" + "<td>" + (x*y) + "</td>");
+                
+                    document.write("</tr>");
+                }
+            document.write("</table> <br>");
+            document.write("<input type='button' class= \"boto\" value='Una altra vegada' onclick='altravegada();'>"); // botó que al clicar una vegada tornar a començar la funció.
+            document.write("</div>");
+
+           unaaltravegada = false
+
+            }
+
+            else { // condició per la qual en el cas que no correspongui a un nombre entre l'1 i el 9 s'informa dels distints errors.
+                    if (x=="") { //quan no s'introdueixen respondrà que la casella està buida 
+                    	alert("La casella està buida!");
+                    }
+                    if (isNaN(x)){ //quan s'introdueixen caràcters no numèrics respondrà dient que no és cap número
+                    	alert("No correspon a cap número.");
+                    }
+                    if (x<1){ // quan s'introdueixen valors inferiors a 1 respondrà que el nombre es massa petit
+                    	alert("El número és massa petit");
+                    }
+                    if (x>9){ // quan s'introdueixen valors superiors a 9 respondrà que és massa gran
+                    	alert("El númro és massa gran");
+                    }
+                    if (!isNaN(x) && x%1!=0) { //quan s'introdueixen decimals respondrà que no és possible executar la funció
+                    	alert("No és possible operar amb decimals");
+                    }
+            	var unaaltravegada=confirm("¿Ho vols tornar a intentar?"); //en el cas d'equivocar-se, et torna a demanar si 'ho vols tornar a intentar' i per mitjà d'un confirm acceptes o cancel·les.
+            }
+
+            
+        }
+
+ }
+
+ 	altravegada();
+
+	</script>
+</body>
+</html>
